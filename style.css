@@ -1,0 +1,383 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* index page */
+.main{
+    height:100%;
+    width:100%;
+    background-color: rgb(11, 11, 11);
+    color: white;
+}
+
+.container {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  
+.container span {
+  text-transform: uppercase;
+  display: block; 
+}
+
+.text1 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  background: rgb(11, 11, 11);
+  position: relative;
+  animation-name: text;
+  animation-duration: 4s;
+}
+.text2 {
+  font-size: 25px;
+  color: #FFE997;
+}
+
+@keyframes text {
+  0% {
+    color: rgb(11, 11, 11);
+    margin-bottom: -40px;
+  }
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+  100% {
+    margin-bottom: 20px;
+  }
+}
+.content{
+    padding-top: 2%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.content ul{
+    list-style-type: none;
+}
+.content ul li{
+    padding-top: 20px;
+}
+.content ul li button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(139, 55, 217);
+    border-radius: 20px;
+
+}
+.content ul li button a {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+/* Add friend feature with same button */
+.AddFriend{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(172, 184, 206);
+}
+#AddFriend-card{
+    border-radius: 10px;
+    height: 450px;
+    width: 300px;
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+}
+#AddFriend-card img{
+    height: 50%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#AddFriend-card h1{
+    font-size: 25px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+#AddFriend-card h5{
+    font-size: 25px;
+    color: red;
+    margin-bottom: 20px;
+}
+#AddFriend-card button{
+    background-color: cadetblue;
+    color: white;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* custom cursor */
+#CustomCursor{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.CustomCursor-cursor{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    position: absolute;
+    transition: all linear 0.0000001ms;
+} 
+#CustomCursor h1{
+    font-size: 10vw;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+
+
+
+
+/* multiple image hovering animation */
+
+#MultiImage{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+}
+.elem{
+    height: 120px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.elem h1{
+    color: white;
+    font-size: 6vw;
+    position: relative;
+    z-index: 9;
+    mix-blend-mode: difference;
+}
+
+.elem img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius:  50%;
+    position: absolute;
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+
+
+
+
+
+/* insta like feature */
+.InstaLike{
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.InstaLike-content {
+	position: relative;
+}
+
+.InstaLike-content h2 {
+    width:900px;
+	color: #7d4d4d;
+	font-size: 4em;
+	position: absolute;
+	transform: translate(-28%, -130%);
+}
+
+.InstaLike-content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #ff0000;
+}
+
+.InstaLike-content h2:nth-child(2) {
+	color: #c37777;
+	animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.InstaLike-sub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#InstaLike-container{
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+}
+#InstaLike-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#InstaLike-container-i{
+    color: #fff;
+    font-size: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition: transform ease 0.2s;
+}
+
+
+
+
+
+/* insta story feature */
+.InstaStory{
+    height: 100%;
+    background-color: rgb(0, 208, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#InstaStory-card{
+    height: 480px;
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid black;
+    position: relative;
+}
+
+#InstaStory-storiyan{
+    height: 120px;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #dadada;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#InstaStory-storiyan::-webkit-scrollbar{
+    display: none;
+}
+.story{
+    border: 3px solid red;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+#InstaStory-full-screen
+{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: none;
+}

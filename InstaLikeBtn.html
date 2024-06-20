@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- insta like feature -->
+    <div class="InstaLike">
+        <div>
+        	<div class="InstaLike-content">
+                <h2>Double Click on Image to Like</h2>
+                <h2>Double Click on Image to Like</h2>
+            </div>
+        <div class="InstaLike-sub">
+            <div id="InstaLike-container">
+                <img src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <i id="InstaLike-container-i" class="ri-heart-3-fill"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        var con = document.querySelector("#InstaLike-container")
+        var love = document.querySelector("#InstaLike-container-i")
+        con.addEventListener("dblclick", function () {
+            love.style.transform = "translate(-50%,-50%) scale(1)"
+            love.style.opacity = 0.8
+            setTimeout(function () {
+                love.style.opacity = 0
+            }, 1000)
+            setTimeout(function () {
+                love.style.transform = "translate(-50%,-50%) scale(0)"
+            }, 2000)
+        })
+    </script>
+</body>
+
+</html>
